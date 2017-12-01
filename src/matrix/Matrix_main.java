@@ -14,6 +14,10 @@ public class Matrix_main {
 		System.out.println("Transpose = "+Arrays.deepToString(mlib.getTranspose(b)));
 		System.out.println("Cofactor = "+ (mlib.getCofactor(c)));
 		System.out.println("Inverse = "+Arrays.deepToString(mlib.getInverse(c)));
+		double d[][] = {{1,1,1,1},{1,1,1,-1},{1,1,-1,1},{1,-1,1,1}};
+		double e[] = {0,4,-4,2};
+		System.out.println("Solution = "+ Arrays.toString(mlib.getSolution(d,e)));
+		
 	} 
 
 }

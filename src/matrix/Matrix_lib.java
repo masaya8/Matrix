@@ -87,4 +87,19 @@ public class Matrix_lib {
 		answer = this.getTranspose(answer);
 		return answer;
 	}
+	
+	public double [] getSolution(double[][] d, double[] e) {
+		double answer [][] = new double [1][e.length];
+		double tmp [][] = new double [e.length][1];
+		for(int i=0; i<e.length; i++) {
+			tmp[i][0] = e[i];
+		}
+		d=getInverse(d);
+		tmp = getProduct(d,tmp);
+		answer = getTranspose(tmp);
+		for(int i=0; i<e.length; i++) {
+			e[i] = answer[0][i];
+		}
+		return e;
+      }
 }
